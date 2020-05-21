@@ -1,0 +1,29 @@
+*, body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    height: 20vh;
+    width: 100%;
+}
+
+ul li{
+    margin-top: 70px;
+}
+
+ul li a{
+    color:white;
+    font-weight: 400;
+}
+.nav-brand{
+    flex: 0.91;
+    padding-top: 10px;
+    margin-left: 70px;
+}
+
+.navi{
+    background-color: rgba(57, 181, 219, 0.24);
+    height: 700px;
+    background-image: url(../assets/Web\ 1920\ –\ 2.png);
+}
