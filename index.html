@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <script src="./js/react.js" ></script>
     <script src="./js/react-dom.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
@@ -14,31 +15,33 @@
 
 
 <body>
-    <div id="artistic-hand">
-        
-    </div>
+    <div id="artistic-hand"></div>
+
+    
 
     <script type="text/babel">
         var Navbar = React.createClass({
             render: function(){
                 return(
                     <div>
-                        <div id="artistic-hand">
-                            <div className="navi">
-                                <ul className="nav">
-                                    <li className="nav-brand">
-                                    <img src="./assets/Group 2.jpg" alt />
-                                    </li>
-                                    <li className="nav-item">
-                                    <a className="nav-link" href="#">About.</a>
-                                    </li>
-                                    <li className="nav-item">
-                                    <a className="nav-link" href="#">Projects.</a>
-                                    </li>
-                                    <li className="nav-item">
-                                    <a className="nav-link" href="#">Contact.</a>
-                                    </li>
-                                </ul>
+                        <div className="navi">
+                            <ul className="nav">
+                                <li className="nav-brand">
+                                <img src="./assets/Group 2.jpg" alt />
+                                </li>
+                                <li className="nav-item">
+                                <a className="nav-link" href="#">About.</a>
+                                </li>
+                                <li className="nav-item">
+                                <a className="nav-link" href="#">Projects.</a>
+                                </li>
+                                <li className="nav-item">
+                                <a className="nav-link" href="#">Contact.</a>
+                                </li>
+                            </ul>
+
+                            <div className="home-txt">
+                                <h1>Artistic-Hand Mukazi</h1>
                             </div>
                         </div>
                     </div>
@@ -47,8 +50,159 @@
             }
         });
 
+        // body component
+        var Body = React.createClass({
+            render: function(){
+                return(
+                    <div>
+                    {/* background image */}
+                        <div className="image-bg">
+                            <div className="eye">
+                                <img className="art-a" src="./assets/eye.png" alt />
+                            </div>
+
+                            <div className="container centered">
+                                <div className="row">
+                                    <div className="col-sm">
+                                        <img className="art-b" src="./assets/nose.png" alt />
+                                    </div>
+                                    <div className="col-lg-7">
+                                        <h3>On the edge of art, design and innovation, we imagine devices</h3>
+                                            <h3>like so many stories</h3>
+                                            <h3>to tell the public.</h3>
+                                            <button type="button" className="btn btn-lg">More info</button> <br/>
+                                            <img className="art-d" src="./assets/mouth.png" alt/>
+                                            <div className="body-txt">
+                                                <h1>Animation / Virtual Reality / Interactive Installations / Pictures manipulations</h1>
+                                            </div>
+                                    </div>
+                                    <div className="col-sm">
+                                        <img className="art-c" src="./assets/ear.png" alt />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        });
+
+        var Black = React.createClass({
+            render: function(){
+                return(
+                    <div>
+                        <div className="black">
+                            <div className="row black">
+                                <div className="card" style={{width: '18rem'}}>
+                                <img className="card-img-top" src="./assets/satue-a.jpg" alt />
+                                <div className="card-body">
+                                    <p className="card-text">Some quick example text to build on the card title and make up.</p>
+                                    <a href="#">See more</a>
+                                </div>
+                            </div>
+
+                            <div className="card" style={{width: '18rem'}}>
+                                <img className="card-img-top" src="./assets/statue-b.jpg" alt />
+                                
+                                <div className="card-body">
+                                    <p className="card-text">Some quick example text to build on the card title and make up.</p>
+                                    <a href="#">See more</a>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <div className="row black" style={{marginleft: '400px'}}>
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/msi.png" alt />
+                                </div>
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/epic.png" alt />
+                                </div>
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/ubisoft.png" alt />
+                                </div>
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/twitch.png" alt />
+                                </div>
+                                <div className="w-100" /> <br />
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/rog.png" alt />
+                                </div>
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/ea.png" alt />
+                                </div>
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/xbox.png" alt />
+                                </div>
+                                <div className="col-2">
+                                    <img className="logo"src="./assets/rockstar.png" alt />
+                                </div>
+                            </div>
+                            <div className="row black">
+                                <button type="button" className="btn white btn-lg">See our projects</button>
+                            </div>
+                        </div>
+                    </div>
+
+                )
+            }
+        });
+
+        var Footer = React.createClass({
+
+            PropTypes: {
+                contant: React.PropTypes.string
+            },
+
+            getDefaultProps: function(){
+                return {
+                    contact: 'For any proposal of collaboration',
+                    calltoaction: 'fell free to contact us',
+                    adress: 'KG 14, Kigali Rwanda',
+                    link: '#'
+                }
+            },
+            render: function(){
+                return(
+                    <div>
+                        <div className="footer">
+                            <h1>{this.props.contact}</h1>
+                            <h1>{this.props.calltoaction}</h1>
+
+                            <div className="address">
+                            <h1>{this.props.adress}</h1>
+                            </div>
+
+                            <div className="row" style={{marginTop: '250px'}}>
+                                <div className="col-2"> <a href={this.props.link}>Facebook.</a></div>
+                                <div className="col-2"><a href="#">Twitter.</a></div>
+                                <div className="col-2"><a href="#">Instagram.</a></div>
+                                <div className="col-2"><a href="#">behance.</a></div>
+                                <div className="col-2"><a href="#">Vimeo.</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                )
+            }
+        });
+        
+
+        var Art = React.createClass({
+            render: function(){
+                return(
+                    <div>
+                        <Navbar/>
+                        <Body />
+                        <Black />
+                        <Footer />
+                    </div>
+                )
+            }
+        });
+
         ReactDOM.render(
-            <Navbar />,
+            <Art />,
             document.getElementById('artistic-hand')
         );
     </script>
